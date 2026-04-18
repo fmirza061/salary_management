@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h1>Salary Insights</h1>
+
+  <%= form_with url: insights_employees_path, method: :get do %>
+    <input name="country" placeholder="Country" class="form-control mb-2">
+    <input name="job_title" placeholder="Job Title" class="form-control mb-2">
+    <button class="btn btn-primary">Search</button>
+  <% end %>
+
+  <% if @stats %>
+    <h3>Country Stats</h3>
+    <p>Min: <%= @stats[:min] %></p>
+    <p>Max: <%= @stats[:max] %></p>
+    <p>Avg: <%= @stats[:avg] %></p>
+  <% end %>
+
+  <% if @job_avg %>
+    <h3>Job Avg Salary</h3>
+    <p><%= @job_avg %></p>
+  <% end %>
+</div>

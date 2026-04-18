@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <h2>Employee Details</h2>
+
+  <p><strong>Name:</strong> <%= @employee.full_name %></p>
+  <p><strong>Job:</strong> <%= @employee.job_title %></p>
+  <p><strong>Country:</strong> <%= @employee.country %></p>
+  <p><strong>Salary:</strong> <%= @employee.salary %></p>
+
+  <%= link_to "Back", employees_path, class: "btn btn-secondary" %>
+</div>
