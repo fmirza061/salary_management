@@ -52,13 +52,20 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: sqlite3
-  database: storage/production.sqlite3
-  pool: 5
-  timeout: 5000
+  primary:
+    adapter: sqlite3
+    database: storage/production.sqlite3
+    pool: 5
+    timeout: 5000
 
-cable:
-  adapter: sqlite3
-  database: storage/production.sqlite3
-  pool: 5
-  timeout: 5000
+  cable:
+    adapter: sqlite3
+    database: storage/production.sqlite3
+    pool: 5
+    timeout: 5000
+
+  queue:
+    adapter: sqlite3
+    database: storage/production.sqlite3
+    pool: 5
+    timeout: 5000
